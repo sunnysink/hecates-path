@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hecate's Path</title>
+<meta name="description" content="A private, eight-week 1:1 initiation into shadow, sovereignty, and spellcraft with Sunny Sink.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+/* ───────────────────────────────────────────────────────────
+   HECATE'S PATH : 1:1 sales page
+   Brand skin: cold near-black ground, torchlight gold, bronze,
+   deep teal, sage. Cinzel Decorative (display) + Lora (body).
+   ─────────────────────────────────────────────────────────── */
+:root{
+  --bg:#0B0E12; --bg2:#141922; --ink:#F0EBDF; --ink-dim:#B4B2A6;
+  --copper:#D8A94A; --copper-lt:#B08D57; --ember:#C08F38; --ember-glow:#E6C169;
+  --forest:#2E5058; --mauve:#33565F; --gold:#D8A94A; --green:#7C876B;
+  --copper-rgb:216,169,74; --copper-lt-rgb:176,141,87;
+  --ember-rgb:192,143,56; --ember-glow-rgb:230,193,105;
+  --gold-rgb:216,169,74; --mauve-rgb:51,86,95;
+  --forest-rgb:46,80,88; --green-rgb:124,135,107;
+  --card-rgb:22,27,35; --bg-rgb:11,14,18; --well-rgb:0,0,0;
+  --display:'Cinzel Decorative','Cinzel',Georgia,serif;
+  --serif:'Lora',Georgia,serif;
+  --sans:'Lora',Georgia,serif;
+  --mono:'Lora',Georgia,serif;
+  --card:rgba(var(--card-rgb),0.72); --cardborder:rgba(var(--copper-rgb),0.24);
+  --glow-a:rgba(var(--gold-rgb),0.10); --glow-b:rgba(var(--forest-rgb),0.16); --glow-c:rgba(var(--gold-rgb),0.08);
+  --on-accent:#17120A; --well-ink:#E6DCCC;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:var(--sans);color:var(--ink);background:var(--bg);
+  background-image:
+    radial-gradient(900px 520px at 10% -10%, var(--glow-a), transparent 60%),
+    radial-gradient(820px 500px at 100% 0%, var(--glow-b), transparent 55%),
+    radial-gradient(760px 620px at 55% 120%, var(--glow-c), transparent 60%);
+  min-height:100vh;padding:0 26px 80px;position:relative;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;line-height:1.7;
+}
+.wrap{max-width:1180px;margin:0 auto;position:relative;z-index:1}
+
+h1,h2,h3,h4{font-family:var(--serif)}
+p{max-width:none}
+
+/* image slots */
+.imgslot{position:relative;border-radius:16px;overflow:hidden;display:grid;place-items:center;text-align:center;
+  background:linear-gradient(150deg,rgba(var(--forest-rgb),.28),rgba(var(--card-rgb),.92));
+  border:1px dashed rgba(var(--copper-rgb),.5)}
+.imgslot .lab{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--copper);padding:16px}
+.imgslot .lab small{display:block;margin-top:6px;letter-spacing:.06em;text-transform:none;color:var(--ink-dim);font-size:11px;opacity:.8}
+.imgslot img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* header / hero */
+header{text-align:center;padding:44px 0 4px}
+.wordmark{font-family:var(--display);font-weight:700;font-size:clamp(24px,3vw,34px);letter-spacing:.16em;text-transform:uppercase;
+  margin-bottom:22px;
+  background:linear-gradient(92deg,var(--copper-lt),var(--gold) 45%,var(--ember-glow) 72%,var(--copper));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-img{width:100%;height:auto;display:block;margin:0 0 20px;border-radius:20px}
+.tagline{font-family:var(--mono);font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--copper);margin:0 0 20px;opacity:.95}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,5vw,62px);line-height:1.05;letter-spacing:.5px;max-width:22ch;margin:0 auto;
+  text-wrap:balance;
+  background:linear-gradient(92deg,var(--copper-lt),var(--gold) 40%,var(--ember-glow) 70%,var(--copper));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sub{font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.2vw,25px);
+  color:var(--ink-dim);margin:18px auto 0;max-width:40ch;line-height:1.4}
+.hero-cta{display:flex;gap:13px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+
+.btn{border:none;border-radius:30px;padding:15px 32px;font-family:var(--serif);font-size:16px;
+  font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:.5em;
+  transition:transform .18s,box-shadow .18s}
+.btn.copy{background:linear-gradient(135deg,var(--gold),var(--ember));color:var(--on-accent)}
+.btn.ghost{background:transparent;color:var(--gold);border:1.5px solid rgba(var(--copper-rgb),.55)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px -10px rgba(var(--gold-rgb),.6)}
+.btn.ghost:hover{border-color:var(--ember-glow);color:var(--ember-glow)}
+
+/* stat strip */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:30px 0 8px}
+.stat{background:var(--card);border:1px solid var(--cardborder);border-radius:16px;
+  padding:19px 16px;text-align:center;backdrop-filter:blur(14px);position:relative;overflow:hidden;
+  box-shadow:0 2px 14px -8px rgba(var(--well-rgb),.6)}
+.stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--copper),var(--ember),var(--gold))}
+.stat .n{font-family:var(--display);font-size:38px;font-weight:700;line-height:1;color:var(--gold)}
+.stat .l{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-dim);margin-top:9px}
+@media(max-width:620px){.stats{grid-template-columns:1fr;gap:10px}
+  .stat{display:flex;align-items:center;justify-content:space-between;text-align:left;padding:14px 18px}
+  .stat .n{font-size:29px}.stat .l{margin-top:0}}
+
+/* section labels */
+.section-label{font-family:var(--mono);font-size:12px;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--ink-dim);margin:60px 0 18px;display:flex;align-items:center;gap:12px}
+.section-label::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(var(--copper-rgb),0.4),transparent)}
+
+/* panel */
+.panel{background:var(--card);border:1px solid var(--cardborder);border-radius:16px;
+  padding:34px 38px;backdrop-filter:blur(14px);box-shadow:0 2px 14px -8px rgba(var(--well-rgb),.6)}
+.panel .lead{font-family:var(--display);font-size:clamp(24px,3vw,36px);font-weight:700;line-height:1.16;color:var(--ink);margin-bottom:18px;letter-spacing:.3px}
+.panel p{font-size:17px;color:var(--ink-dim);margin-bottom:14px}
+.panel p:last-child{margin-bottom:0}
+.panel b{color:var(--ink)}
+
+/* grids */
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:860px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--cardborder);border-radius:15px;
+  padding:24px 24px;backdrop-filter:blur(12px);box-shadow:0 2px 14px -8px rgba(var(--well-rgb),.6)}
+
+/* pains */
+.pain .n{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.16em;color:var(--copper);opacity:.9}
+.pain p{font-size:16.5px;color:var(--ink-dim);margin-top:10px;font-style:italic}
+.pain-foot{font-family:var(--display);font-size:clamp(26px,3.4vw,40px);color:var(--ink);
+  margin-top:30px;text-align:center;line-height:1.2;letter-spacing:.4px}
+.pain-foot b{color:var(--gold);font-weight:700}
+
+/* benefits */
+.ben .ic{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;margin-bottom:15px;
+  border:1px solid rgba(var(--copper-rgb),.45);color:var(--gold);font-size:20px}
+.ben h4{font-size:22px;font-weight:600;color:var(--ink);margin-bottom:7px;line-height:1.1}
+.ben p{font-size:15.5px;color:var(--ink-dim)}
+
+/* how */
+.how .step{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ember-glow)}
+.how h4{font-size:23px;font-weight:600;color:var(--ink);margin:11px 0 8px}
+.how p{font-size:15px;color:var(--ink-dim)}
+
+/* journey */
+.phase{margin-top:36px}
+.phase:first-of-type{margin-top:8px}
+.phase-head{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;margin-bottom:20px}
+.phase-num{font-family:var(--display);font-size:56px;font-weight:700;line-height:.8;
+  color:transparent;-webkit-text-stroke:1.2px var(--copper);letter-spacing:1px}
+.phase-head .pk{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--copper);margin-bottom:8px}
+.phase-head h3{font-family:var(--display);font-size:clamp(24px,3.4vw,36px);font-weight:700;color:var(--ink);line-height:1.08;letter-spacing:.3px}
+.phase-head .desc{font-size:16px;color:var(--ink-dim);margin-top:11px;max-width:62ch;font-style:italic}
+.week{position:relative;overflow:hidden;padding-left:26px}
+.week::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--copper),var(--ember))}
+.week .wk{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);opacity:.9}
+.week h4{font-size:20px;font-weight:600;color:var(--ink);margin:10px 0 8px;line-height:1.12}
+.week p{font-size:14.5px;color:var(--ink-dim);line-height:1.55}
+.week .spell{font-style:italic;color:var(--ember-glow);margin-top:12px;font-size:14.5px;line-height:1.45}
+
+/* what's inside — list */
+.inside{background:var(--card);border:1px solid var(--cardborder);border-radius:16px;
+  padding:6px 20px;backdrop-filter:blur(14px);box-shadow:0 2px 14px -8px rgba(var(--well-rgb),.6)}
+.irow{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;
+  padding:22px 6px;border-bottom:1px solid rgba(var(--copper-rgb),.15)}
+.irow:last-child{border-bottom:none}
+.irow .ic{width:44px;height:44px;border-radius:11px;display:grid;place-items:center;font-size:20px;color:var(--gold);
+  border:1px solid rgba(var(--copper-rgb),.4);background:rgba(var(--gold-rgb),.06)}
+.irow h4{font-size:20px;font-weight:600;color:var(--ink);line-height:1.15}
+.irow p{font-size:15px;color:var(--ink-dim);margin-top:5px}
+.irow .ct{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ember-glow);white-space:nowrap}
+@media(max-width:560px){.irow{grid-template-columns:auto 1fr;padding:18px 2px}.irow .ct{display:none}}
+
+/* per-step mockup band inside the eight-weeks area */
+.phase-mock{width:100%;height:auto;display:block;margin:0 0 18px;border-radius:14px}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:36px;align-items:start}
+.coach-photo{width:100%;height:auto;display:block;border-radius:16px}
+.about-body h3{font-family:var(--display);font-size:clamp(24px,3.2vw,34px);font-weight:700;color:var(--ink);line-height:1.12;margin-bottom:18px;letter-spacing:.3px}
+.about-body p{font-size:16.5px;color:var(--ink-dim);margin-bottom:14px}
+.about-body .staccato{color:var(--ink);font-style:italic}
+.about-body .sig{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold);margin-top:8px;line-height:1.4}
+@media(max-width:720px){.about-grid{grid-template-columns:1fr;gap:26px}.coach-photo{max-width:320px;margin:0 auto}}
+
+/* testimonials — images only, masonry */
+.tgrid-img{column-count:3;column-gap:14px}
+@media(max-width:860px){.tgrid-img{column-count:2}}
+@media(max-width:560px){.tgrid-img{column-count:1}}
+.tgrid-img .timg{break-inside:avoid;margin:0 0 14px;width:100%;border-radius:14px;display:block;
+  border:1px solid var(--cardborder);box-shadow:0 2px 14px -8px rgba(var(--well-rgb),.6)}
+.tgrid-img .imgslot{break-inside:avoid;margin:0 0 14px;aspect-ratio:4/5}
+.tgrid-img .imgslot .lab{font-size:11px;letter-spacing:.14em}
+
+/* pricing */
+.price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:840px;margin:0 auto;align-items:stretch}
+.pcard{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--cardborder);border-radius:18px;
+  padding:34px 32px;backdrop-filter:blur(14px);box-shadow:0 2px 14px -8px rgba(var(--well-rgb),.6)}
+.pcard.feat{border:1.5px solid rgba(var(--gold-rgb),.65);box-shadow:0 16px 40px -24px rgba(var(--gold-rgb),.55)}
+.pcard .flag{position:absolute;top:-13px;left:30px;background:linear-gradient(135deg,var(--gold),var(--ember));color:var(--on-accent);
+  font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border-radius:20px}
+.pcard .plan{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-dim)}
+.pcard .amt{font-family:var(--display);font-size:52px;font-weight:700;color:var(--gold);line-height:1;margin:12px 0 6px}
+.pcard .amt small{font-size:18px;color:var(--ink-dim);font-family:var(--serif);font-weight:400}
+.pcard .save{display:inline-block;align-self:flex-start;background:rgba(var(--gold-rgb),.16);color:var(--gold);font-size:12.5px;font-weight:600;padding:4px 12px;border-radius:20px;margin-bottom:6px}
+.pcard .save.plain{background:transparent;padding-left:0;color:var(--ink-dim)}
+.pcard ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin:18px 0 24px}
+.pcard li{display:flex;gap:10px;font-size:15px;color:var(--ink-dim)}
+.pcard li svg{flex:none;margin-top:3px;color:var(--gold)}
+.pcard .btn{width:100%;justify-content:center;margin-top:auto}
+.guarantee{max-width:600px;margin:26px auto 0;text-align:center;font-size:15px;color:var(--ink-dim);
+  display:flex;flex-direction:column;gap:10px;align-items:center;line-height:1.6}
+.guarantee svg{color:var(--copper);flex:none}
+@media(max-width:640px){.price-grid{grid-template-columns:1fr}}
+
+/* faq */
+.faq{max-width:780px;margin:0 auto}
+details{border-bottom:1px solid rgba(var(--copper-rgb),.22);padding:4px 0}
+summary{cursor:pointer;list-style:none;padding:20px 44px 20px 0;position:relative;
+  font-family:var(--serif);font-size:21px;font-weight:600;color:var(--ink)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);
+  font-family:var(--serif);font-size:24px;color:var(--gold);transition:transform .2s}
+details[open] summary::after{content:"\2013"}
+details p{font-size:16px;color:var(--ink-dim);padding:0 44px 20px 0}
+
+/* final */
+.final{margin-top:22px;text-align:center;padding:58px 46px;border-radius:20px;backdrop-filter:blur(14px);
+  background:linear-gradient(150deg,rgba(var(--forest-rgb),.22),rgba(var(--card-rgb),.9));
+  border:1px solid rgba(var(--copper-rgb),.36)}
+.final h2{font-family:var(--display);font-size:clamp(30px,4.4vw,52px);font-weight:700;color:var(--ink);line-height:1.08;max-width:20ch;margin:0 auto 18px;letter-spacing:.4px}
+.final p{font-size:18px;color:var(--ink-dim);max-width:52ch;margin:0 auto 28px;line-height:1.6}
+.final .fineprint{margin-top:20px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--ink-dim);opacity:.85}
+
+footer{margin-top:52px;text-align:center;font-family:var(--mono);font-size:12px;color:var(--ink-dim);opacity:.7;letter-spacing:.05em;line-height:2}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.dcard:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="wordmark">Hecate's Path</div>
+
+    <img class="hero-img rv" src="images/1.png" alt="Hecate's Path">
+
+
+    <div class="tagline">8 Weeks of Shadow, Sovereignty, and Spellcraft</div>
+
+    <h1>This isn't healing. It's claiming.</h1>
+    <div class="sub">You're standing at a threshold. Hecate's threshold. And once you cross it, nothing stays the same.</div>
+    <div class="hero-cta">
+      <a href="#join" class="btn copy">🖤 Yes. I'm Ready</a>
+      <a href="#weeks" class="btn ghost">See the eight weeks</a>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><div class="n">8</div><div class="l">Weeks, private &amp; guided</div></div>
+    <div class="stat"><div class="n">8</div><div class="l">One-to-one calls with Sunny</div></div>
+    <div class="stat"><div class="n">5</div><div class="l">Seats this cohort</div></div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="section-label">What this is</div>
+  <div class="panel rv">
+    <div class="lead">The flame's been lit. The tide is rising. The door is open.</div>
+    <p>You've done the healing, the work, the rituals. Hecate's Path is where you stop reflecting and start casting. This is ritualized, embodied, spell-forged shadow work, walked one to one with me over eight weeks.</p>
+    <p>Every week you get a video teaching, a ritual to cast, a tarot spread to read yourself through, and a private call where the week's work is aimed straight at your life. <b>This isn't surface empowerment. This is shadow work with teeth and a torch in your hand.</b></p>
+  </div>
+
+  <!-- PAINS -->
+  <div class="section-label">You might feel</div>
+  <div class="grid-3">
+    <div class="card pain rv"><div class="n">01</div><p>Like you've done the healing, the work, the rituals… and something still feels out of reach.</p></div>
+    <div class="card pain rv"><div class="n">02</div><p>Like you know you're powerful, but you haven't fully figured out how to use that power.</p></div>
+    <div class="card pain rv"><div class="n">03</div><p>Like your intuition is strong, but your actions don't always follow.</p></div>
+    <div class="card pain rv"><div class="n">04</div><p>Like your spiritual practice feels disconnected from the version of you you're meant to be.</p></div>
+    <div class="card pain rv"><div class="n">05</div><p>Like the same fears, patterns, or roles keep pulling you back.</p></div>
+    <div class="card pain rv"><div class="n">06</div><p>Like you've outgrown who you've been, but haven't fully stepped into who you are.</p></div>
+  </div>
+  <p class="pain-foot rv">This isn't healing. <b>It's claiming.</b></p>
+
+  <!-- BENEFITS -->
+  <div class="section-label">After walking Hecate's Path</div>
+  <div class="grid-3">
+    <div class="card ben rv"><div class="ic">✦</div><h4>Trust in motion</h4><p>You trust yourself fully, not just in stillness, but in motion.</p></div>
+    <div class="card ben rv"><div class="ic">🗝️</div><h4>Magic you use</h4><p>You know how to work with your magic, not just sense it.</p></div>
+    <div class="card ben rv"><div class="ic">⚔️</div><h4>No more second-guessing</h4><p>You act without second-guessing.</p></div>
+    <div class="card ben rv"><div class="ic">👑</div><h4>Sovereignty, not survival</h4><p>You speak, lead, and create from sovereignty, not survival.</p></div>
+    <div class="card ben rv"><div class="ic">🕯️</div><h4>Shadow into spell</h4><p>You turn your shadows into spells that create real change.</p></div>
+    <div class="card ben rv"><div class="ic">🌲</div><h4>Free from the loops</h4><p>The same fears and roles stop dragging you back to who you were.</p></div>
+  </div>
+
+  <!-- HOW -->
+  <div class="section-label">How it works</div>
+  <div class="grid-3">
+    <div class="card how rv"><div class="step">Every week</div><h4>The teaching</h4><p>A video that carries you from meeting Hecate to embodying your power, watched in your own space.</p></div>
+    <div class="card how rv"><div class="step">Every week</div><h4>The ritual and the spread</h4><p>A ritual to cast and a tarot spread to read, so the shadow becomes a spell and the spell becomes change.</p></div>
+    <div class="card how rv"><div class="step">Every week</div><h4>Your private call</h4><p>One to one with Sunny, the week's work aimed straight at your life, your patterns, your threshold.</p></div>
+  </div>
+
+  <!-- JOURNEY -->
+  <div class="section-label" id="weeks">The eight weeks</div>
+
+  <div class="phase rv">
+    <div class="phase-head">
+      <div class="phase-num">01</div>
+      <div><div class="pk">Weeks 1 to 3 · The Calling Deep</div><h3>Answer the pull. Cut the cords. Choose your new name.</h3></div>
+    </div>
+    <img class="phase-mock" src="images/step-1.png" alt="The Calling Deep">
+    <div class="grid-3">
+      <div class="card week"><div class="wk">Week 01</div><h4>Meet Hecate</h4><p>Learn her archetype, unlock the keys to working with her, and awaken the part of you this journey was made for.</p><p class="spell">🗝️ The key was never lost. You just forgot you were the one who forged it.</p></div>
+      <div class="card week"><div class="wk">Week 02</div><h4>Identify the Patterns</h4><p>Name the fears, cycles, and habits draining your power, cut the cords, and clear space for what's next.</p><p class="spell">🐍 The pattern isn't the prison. Your silence is. Name it, and the gate swings open.</p></div>
+      <div class="card week"><div class="wk">Week 03</div><h4>Choose a New Identity</h4><p>Redefine who you are, claim the truth you've hidden, and step fully into the self you were meant to be.</p><p class="spell">⚔️ Every old name falls like armor. Only what's sacred remains.</p></div>
+    </div>
+  </div>
+
+  <div class="phase rv">
+    <div class="phase-head">
+      <div class="phase-num">02</div>
+      <div><div class="pk">Weeks 4 to 6 · The Tidal Crossroads</div><h3>Face the mirror. Cast the spell. Cross the line.</h3></div>
+    </div>
+    <img class="phase-mock" src="images/step-2.png" alt="The Tidal Crossroads">
+    <div class="grid-3">
+      <div class="card week"><div class="wk">Week 04</div><h4>Trust Your Intuition</h4><p>Strengthen the bridge between what you know and what you do, and make every choice a move toward your power.</p><p class="spell">🌒 The moon doesn't ask for permission to pull the tide. Neither should you.</p></div>
+      <div class="card week"><div class="wk">Week 05</div><h4>Practice Spellcraft</h4><p>Transform your shadows into spells, reclaim your magic, and craft rituals that create real change.</p><p class="spell">🕯️ Your shadow is not an enemy. It's your rawest ingredient.</p></div>
+      <div class="card week"><div class="wk">Week 06</div><h4>Claim the Threshold</h4><p>End what no longer serves you, speak your becoming into existence, and cross the line without looking back.</p><p class="spell">🚪 The door opens without a knob because it already knows your name.</p></div>
+    </div>
+  </div>
+
+  <div class="phase rv">
+    <div class="phase-head">
+      <div class="phase-num">03</div>
+      <div><div class="pk">Weeks 7 to 8 · The Salt Crown</div><h3>Root. Rise. Reign.</h3></div>
+    </div>
+    <img class="phase-mock" src="images/step-3.png" alt="The Salt Crown">
+    <div class="grid-2">
+      <div class="card week"><div class="wk">Week 07</div><h4>Root the Identity</h4><p>Align your life, rituals, and voice with who you've become, and refuse to be pulled back into the past.</p><p class="spell">🌲 She who roots herself cannot be dragged.</p></div>
+      <div class="card week"><div class="wk">Week 08</div><h4>Embody Your Power</h4><p>Lead, create, and cast as the version of you who shapes reality with intention.</p><p class="spell">🔥 You are not wielding power. You are becoming it.</p></div>
+    </div>
+  </div>
+
+  <!-- DELIVERABLES -->
+  <div class="section-label">What's inside</div>
+  <div class="inside rv">
+    <div class="irow"><div class="ic">▶</div><div><h4>Eight weekly video teachings</h4><p>One video a week, from meeting Hecate to embodying your power. The path is walked through the weekly video and yours to keep.</p></div><div class="ct">Video · 8 weeks</div></div>
+    <div class="irow"><div class="ic">📜</div><div><h4>Weekly guides</h4><p>Written guides that walk you through each week's ritual, spell, and spread, step by step.</p></div><div class="ct">Guide · 8 weeks</div></div>
+    <div class="irow"><div class="ic">🕯️</div><div><h4>Eight rituals and spells</h4><p>A spell to cast each week, the practice that turns your shadow into real change.</p></div><div class="ct">Ritual · spellwork</div></div>
+    <div class="irow"><div class="ic">🔮</div><div><h4>Eight tarot spreads</h4><p>A spread built for each week's work, to read yourself through the crossing.</p></div><div class="ct">Tarot · 8 spreads</div></div>
+    <div class="irow"><div class="ic">🗝️</div><div><h4>Eight private 1:1 calls with Sunny</h4><p>A call every week, including a dedicated belief unpacking session where we find the belief under the pattern and take it apart.</p></div><div class="ct">Live · weekly</div></div>
+    <div class="irow"><div class="ic">🌙</div><div><h4>3 meditations</h4><p>One guided meditation for each step of the path, to drop into the work between calls.</p></div><div class="ct">Audio · 3</div></div>
+    <div class="irow"><div class="ic">🃏</div><div><h4>Hecatean Mirror Oracle Deck</h4><p>A 44-card deck built for this work, yours to keep and read long after the path is done.</p></div><div class="ct">Oracle · 44 cards</div></div>
+    <div class="irow"><div class="ic">♾️</div><div><h4>Lifetime access to all of it</h4><p>Every teaching, ritual, spread, meditation, and your call recordings stay yours. Walk the path again whenever you need it.</p></div><div class="ct">Yours to keep</div></div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="section-label">The story behind Hecate's Path</div>
+  <div class="panel rv">
+    <div class="about-grid">
+      <img class="coach-photo" src="images/sunny.png" alt="Sunny Sink">
+      <div class="about-body">
+        <h3>The Story Behind Hecate's Path</h3>
+        <p>Hi There! My name is Sunny Sink, and I am an intuitive, tarot teacher and spiritual business coach.</p>
+        <p>When I made the move from Wyoming to Oregon… leaving behind everything I had known I felt it.</p>
+        <p class="staccato">Not a voice.<br>A presence.<br>A threshold.</p>
+        <p>Hecate had been calling to me for months, but the moment I crossed that state line, I knew: it's time.</p>
+        <p>I began working with her privately… letting her archetype guide me through shadows I thought I'd already healed. But this wasn't the shadow work I'd done before. This was ritualized. Embodied. Spell-forged.</p>
+        <p class="staccato">Where I once used psychology, now I used spellcraft.<br>Where I once reflected, now I cast.</p>
+        <p>That's when it clicked: this isn't just personal. It's a path. And I wanted to walk it alongside others.</p>
+        <p>So I created Hecate's Path, an 8-week container for those ready to explore their shadows with depth, magic, and mythic power. This is your chance to receive my closest attention and cast spells in a space that honors both your power and your process.</p>
+        <p>Because I don't just want you to "feel better." I want you to feel free. Free from the loops. Free to live the life that's been calling you. And free to weave ritual into your healing.</p>
+        <p class="sig">This isn't surface empowerment. This is shadow work with teeth and a torch in your hand.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="section-label">From the ones who walked it</div>
+  <div class="tgrid-img rv">
+    <img class="timg" src="images/testimonial-1.png" alt="Client testimonial">
+    <img class="timg" src="images/testimonial-2.png" alt="Client testimonial">
+    <img class="timg" src="images/testimonial-3.png" alt="Client testimonial">
+    <img class="timg" src="images/testimonial-4.jpg" alt="Client testimonial">
+    <img class="timg" src="images/testimonial-5.png" alt="Client testimonial">
+    <img class="timg" src="images/testimonial-6.png" alt="Client testimonial">
+  </div>
+
+  <!-- PRICING -->
+  <div class="section-label" id="join">Two ways to join</div>
+  <div class="price-grid">
+    <div class="pcard feat rv">
+      <div class="flag">Founder rate</div>
+      <div class="plan">Pay in full</div>
+      <div class="amt">$777</div>
+      <div class="save">Founder rate through October 8 · $1,111 after</div>
+      <ul>
+        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Eight weekly video teachings</li>
+        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Eight rituals, eight spreads, three meditations</li>
+        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Eight private 1:1 calls with Sunny</li>
+        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> The 44-card oracle deck and lifetime access</li>
+      </ul>
+      <a href="https://buy.stripe.com/4gM7sMeW82vd6CCeJGfnO0p" class="btn copy">🖤 Yes. I'm Ready — Pay in Full</a>
+    </div>
+    <div class="pcard rv">
+      <div class="plan">Two payments</div>
+      <div class="amt">$444<small> × 2</small></div>
+      <div class="save plain">Two payments of $444 · $888 total</div>
+      <ul>
+        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> The same full path, split into two</li>
+        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> First payment holds your seat</li>
+        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Full access from day one</li>
+        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Founder rate, through October 8</li>
+      </ul>
+      <a href="https://buy.stripe.com/8x27sMeW88TBf988lifnO0q" class="btn ghost">🖤 I'm Ready — Two Payments</a>
+    </div>
+  </div>
+  <div class="guarantee">
+    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 2l6 2.5v5c0 4-2.7 6.7-6 8.5-3.3-1.8-6-4.5-6-8.5v-5L10 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    <span>Five seats a cohort, held privately, so every spell you cast has my full attention. If Hecate has been calling you, the door is open now.</span>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section-label">Questions, answered</div>
+  <div class="faq">
+    <details open><summary>Who is this for?</summary><p>Those who have done real healing and inner work and are standing at the threshold where the old self still runs the show. You don't need to be at the start of anything. You need to be ready to cross.</p></details>
+    <details><summary>Do I need to know tarot or spellcraft already?</summary><p>No. Each week's video and written guides walk you through the ritual, the spell, and the tarot spread, and the Hecatean Mirror Oracle Deck comes with the path. You learn it as you walk it. If you already read and cast, you'll go deeper with it.</p></details>
+    <details><summary>Is this therapy?</summary><p>No. This is initiatory shadow and spellwork, and it does not replace care from a licensed professional. If you are in crisis or in active treatment, keep your therapist in the loop and we'll work alongside it.</p></details>
+    <details><summary>What if I miss a week?</summary><p>Every teaching, ritual, spread, and meditation is yours with lifetime access, so a full week is never lost. Your private calls are scheduled with you and can be moved when life needs them to move.</p></details>
+    <details><summary>What happens after week eight?</summary><p>You keep everything: the teachings, the rituals and spreads, the meditations, the oracle deck, and your call recordings. The path stays with you and you can walk it again whenever you need it.</p></details>
+    <details><summary>When does it start, and can I split the payment?</summary><p>The next cohort begins October 15, 2026. You can pay in full at the founder rate or in two payments of $444, both above. The founder rate holds through October 8.</p></details>
+  </div>
+
+  <!-- FINAL -->
+  <div class="section-label">One more thing</div>
+  <div class="final rv">
+    <h2>The door opens without a knob because it already knows your name.</h2>
+    <p>You can keep circling the threshold, or you can cross it. Hecate's Path is eight weeks, one to one, to release what you've outgrown, reclaim your magic, and reign. Five seats, and the door is open now.</p>
+    <a href="#join" class="btn copy">🖤 Yes. I'm Ready</a>
+    <div class="fineprint">Five seats this cohort · Founder rate through October 8 · Begins October 15, 2026</div>
+  </div>
+
+  <footer>
+    Hecate's Path · a private initiation with Sunny Sink
+  </footer>
+</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(('IntersectionObserver' in window)&&!window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else { els.forEach(function(e){e.classList.add('in')}); }
+})();
+</script>
+</body>
+</html>
