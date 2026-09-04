@@ -61,7 +61,7 @@ header{text-align:center;padding:44px 0 4px}
   margin-bottom:22px;
   background:linear-gradient(92deg,var(--copper-lt),var(--gold) 45%,var(--ember-glow) 72%,var(--copper));
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.hero-img{width:100%;height:auto;display:block;margin:0 0 20px;border-radius:20px}
+.hero-img{width:100%;max-width:810px;height:auto;display:block;margin:0 auto 20px;border-radius:20px}
 .tagline{font-family:var(--mono);font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--copper);margin:0 0 20px;opacity:.95}
 h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,5vw,62px);line-height:1.05;letter-spacing:.5px;max-width:22ch;margin:0 auto;
   text-wrap:balance;
@@ -163,7 +163,7 @@ h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,5vw,62px);lin
 @media(max-width:560px){.irow{grid-template-columns:auto 1fr;padding:18px 2px}.irow .ct{display:none}}
 
 /* per-step mockup band inside the eight-weeks area */
-.phase-mock{width:100%;height:auto;display:block;margin:0 0 18px;border-radius:14px}
+.phase-mock{width:100%;max-width:400px;height:auto;display:block;margin:0 auto 18px;border-radius:14px}
 
 /* about */
 .about-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:36px;align-items:start}
@@ -175,7 +175,7 @@ h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,5vw,62px);lin
 @media(max-width:720px){.about-grid{grid-template-columns:1fr;gap:26px}.coach-photo{max-width:320px;margin:0 auto}}
 
 /* testimonials — images only, masonry */
-.tgrid-img{column-count:3;column-gap:14px}
+.tgrid-img{column-count:3;column-gap:14px;max-width:940px;margin:0 auto}
 @media(max-width:860px){.tgrid-img{column-count:2}}
 @media(max-width:560px){.tgrid-img{column-count:1}}
 .tgrid-img .timg{break-inside:avoid;margin:0 0 14px;width:100%;border-radius:14px;display:block;
