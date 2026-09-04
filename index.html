@@ -162,8 +162,15 @@ h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,5vw,62px);lin
 .irow .ct{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ember-glow);white-space:nowrap}
 @media(max-width:560px){.irow{grid-template-columns:auto 1fr;padding:18px 2px}.irow .ct{display:none}}
 
-/* per-step mockup band inside the eight-weeks area */
-.phase-mock{width:100%;max-width:400px;height:auto;display:block;margin:0 auto 18px;border-radius:14px}
+/* per-step mockup + info, inside the eight-weeks area */
+.phase-detail{display:grid;grid-template-columns:380px 1fr;gap:34px;align-items:center;margin:2px 0 26px}
+.phase-detail .pimg{width:100%;max-width:400px;height:auto;display:block;border-radius:14px}
+.pinfo .pdesc{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink-dim);margin-bottom:16px;line-height:1.4}
+.pinfo ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin:0 0 16px}
+.pinfo li{display:flex;gap:11px;font-size:16px;color:var(--ink-dim);line-height:1.42}
+.pinfo li b{color:var(--ink)}
+.pinfo .pincludes{font-size:14px;color:var(--ink-dim);opacity:.85;border-top:1px solid rgba(var(--copper-rgb),.18);padding-top:14px;line-height:1.5}
+@media(max-width:760px){.phase-detail{grid-template-columns:1fr;gap:20px;margin-bottom:20px}.phase-detail .pimg{max-width:340px}}
 
 /* about */
 .about-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:36px;align-items:start}
@@ -303,7 +310,20 @@ footer{margin-top:52px;text-align:center;font-family:var(--mono);font-size:12px;
       <div class="phase-num">01</div>
       <div><div class="pk">Weeks 1 to 3 · The Calling Deep</div><h3>Answer the pull. Cut the cords. Choose your new name.</h3></div>
     </div>
-    <img class="phase-mock" src="images/step-1.png" alt="The Calling Deep">
+    <div class="phase-detail">
+      <img class="pimg" src="images/step-1.png" alt="The Calling Deep">
+      <div class="pinfo">
+        <p class="pdesc">This is where the old patterns lose their grip and the path begins to rise.</p>
+        <ul>
+          <li>🗝️ <span><b>Meet Hecate</b> and unlock the keys to this sacred work</span></li>
+          <li>🗝️ <span><b>Name the fears and cycles</b> draining your power</span></li>
+          <li>🗝️ <span><b>Choose a new identity,</b> one rooted in truth, not survival</span></li>
+          <li>🗝️ <span><b>The Calling Deep Meditation</b></span></li>
+          <li>🗝️ <span><b>The Hecatean Mirror Oracle Deck,</b> 44 cards</span></li>
+        </ul>
+        <p class="pincludes">Includes the weekly video teachings and guides, ritual worksheets, tarot spreads, your private 1:1 calls, and lifetime access to replays.</p>
+      </div>
+    </div>
     <div class="grid-3">
       <div class="card week"><div class="wk">Week 01</div><h4>Meet Hecate</h4><p>Learn her archetype, unlock the keys to working with her, and awaken the part of you this journey was made for.</p><p class="spell">🗝️ The key was never lost. You just forgot you were the one who forged it.</p></div>
       <div class="card week"><div class="wk">Week 02</div><h4>Identify the Patterns</h4><p>Name the fears, cycles, and habits draining your power, cut the cords, and clear space for what's next.</p><p class="spell">🐍 The pattern isn't the prison. Your silence is. Name it, and the gate swings open.</p></div>
@@ -316,7 +336,19 @@ footer{margin-top:52px;text-align:center;font-family:var(--mono);font-size:12px;
       <div class="phase-num">02</div>
       <div><div class="pk">Weeks 4 to 6 · The Tidal Crossroads</div><h3>Face the mirror. Cast the spell. Cross the line.</h3></div>
     </div>
-    <img class="phase-mock" src="images/step-2.png" alt="The Tidal Crossroads">
+    <div class="phase-detail">
+      <img class="pimg" src="images/step-2.png" alt="The Tidal Crossroads">
+      <div class="pinfo">
+        <p class="pdesc">Move from insight into embodiment, supported by intuition and ritual.</p>
+        <ul>
+          <li>👁️ <span><b>Strengthen the bridge</b> between knowing and doing</span></li>
+          <li>👁️ <span><b>Create spells and rituals</b> that actually work</span></li>
+          <li>👁️ <span><b>Close what's finished</b> and step fully into your new self</span></li>
+          <li>👁️ <span><b>The Tidal Crossroads Meditation</b></span></li>
+        </ul>
+        <p class="pincludes">Includes the weekly video teachings and guides, ritual worksheets, tarot spreads, your private 1:1 calls, and lifetime access to replays.</p>
+      </div>
+    </div>
     <div class="grid-3">
       <div class="card week"><div class="wk">Week 04</div><h4>Trust Your Intuition</h4><p>Strengthen the bridge between what you know and what you do, and make every choice a move toward your power.</p><p class="spell">🌒 The moon doesn't ask for permission to pull the tide. Neither should you.</p></div>
       <div class="card week"><div class="wk">Week 05</div><h4>Practice Spellcraft</h4><p>Transform your shadows into spells, reclaim your magic, and craft rituals that create real change.</p><p class="spell">🕯️ Your shadow is not an enemy. It's your rawest ingredient.</p></div>
@@ -329,7 +361,18 @@ footer{margin-top:52px;text-align:center;font-family:var(--mono);font-size:12px;
       <div class="phase-num">03</div>
       <div><div class="pk">Weeks 7 to 8 · The Salt Crown</div><h3>Root. Rise. Reign.</h3></div>
     </div>
-    <img class="phase-mock" src="images/step-3.png" alt="The Salt Crown">
+    <div class="phase-detail">
+      <img class="pimg" src="images/step-3.png" alt="The Salt Crown">
+      <div class="pinfo">
+        <p class="pdesc">Anchor into the version of you that doesn't flinch when the world watches.</p>
+        <ul>
+          <li>👑 <span><b>Align your life, rituals, and voice</b> with who you've become</span></li>
+          <li>👑 <span><b>Lead, create, and cast</b> as the version of you who shapes reality</span></li>
+          <li>👑 <span><b>The Salt Crown Meditation</b></span></li>
+        </ul>
+        <p class="pincludes">Includes the weekly video teachings and guides, ritual worksheets, tarot spreads, your private 1:1 calls, and lifetime access to replays.</p>
+      </div>
+    </div>
     <div class="grid-2">
       <div class="card week"><div class="wk">Week 07</div><h4>Root the Identity</h4><p>Align your life, rituals, and voice with who you've become, and refuse to be pulled back into the past.</p><p class="spell">🌲 She who roots herself cannot be dragged.</p></div>
       <div class="card week"><div class="wk">Week 08</div><h4>Embody Your Power</h4><p>Lead, create, and cast as the version of you who shapes reality with intention.</p><p class="spell">🔥 You are not wielding power. You are becoming it.</p></div>
