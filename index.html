@@ -181,6 +181,25 @@ h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,5vw,62px);lin
 .about-body .sig{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold);margin-top:8px;line-height:1.4}
 @media(max-width:720px){.about-grid{grid-template-columns:1fr;gap:26px}.coach-photo{max-width:320px;margin:0 auto}}
 
+/* featured testimonial — one full-width row, program-specific */
+.tfeat{display:grid;grid-template-columns:150px 1fr;gap:34px;align-items:center;max-width:940px;margin:0 auto 22px;
+  background:var(--card);border:1.5px solid rgba(var(--gold-rgb),.55);border-radius:18px;padding:36px 40px;
+  backdrop-filter:blur(14px);box-shadow:0 16px 40px -24px rgba(var(--gold-rgb),.5)}
+.tfeat .tphoto{position:relative;width:150px;height:150px;border-radius:50%;overflow:hidden;
+  border:2px solid rgba(var(--gold-rgb),.7);box-shadow:0 0 0 6px rgba(var(--gold-rgb),.12);
+  background:linear-gradient(150deg,rgba(var(--forest-rgb),.4),rgba(var(--card-rgb),.95));display:grid;place-items:center}
+.tfeat .tphoto img{width:100%;height:100%;object-fit:cover;display:block}
+.tfeat .tphoto .initial{font-family:var(--display);font-size:40px;font-weight:700;color:var(--gold);line-height:1;letter-spacing:.04em}
+.tfeat .tphoto.empty{border-style:dashed}
+.tfeat .tquote p{font-size:17px;color:var(--ink);margin-bottom:14px;line-height:1.7}
+.tfeat .tquote p:first-child::before{content:"\201C";font-family:var(--display);color:var(--gold);font-size:34px;line-height:0;margin-right:6px;vertical-align:-10px}
+.tfeat .tquote p:last-of-type{margin-bottom:0}
+.tfeat .twho{margin-top:18px;padding-top:14px;border-top:1px solid rgba(var(--copper-rgb),.22)}
+.tfeat .twho b{font-family:var(--serif);font-weight:600;color:var(--gold);font-size:16px;display:block}
+.tfeat .twho span{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-dim)}
+@media(max-width:640px){.tfeat{grid-template-columns:1fr;gap:22px;padding:30px 24px;justify-items:center;text-align:center}
+  .tfeat .tphoto{width:120px;height:120px}.tfeat .tquote{text-align:left}}
+
 /* testimonials — images only, masonry */
 .tgrid-img{column-count:3;column-gap:14px;max-width:940px;margin:0 auto}
 @media(max-width:860px){.tgrid-img{column-count:2}}
@@ -415,6 +434,17 @@ footer{margin-top:52px;text-align:center;font-family:var(--mono);font-size:12px;
 
   <!-- TESTIMONIALS -->
   <div class="section-label">From the ones who walked it</div>
+  <div class="tfeat rv">
+    <div class="tphoto empty">
+      <span class="initial">MB</span>
+      <img src="images/maria.jpg" alt="Maria B." onerror="this.remove()" onload="this.parentNode.classList.remove('empty');this.previousElementSibling.remove()">
+    </div>
+    <div class="tquote">
+      <p>Looking back, I can see that Hecate Path was part of the journey that led me to write What’s Stopping You? I did the training before I wrote the book, and I now realize I was already exploring these same inner patterns in my own life without fully understanding where they came from. The belief unpacking work helped me uncover something much deeper—the fear of being annoying or a bother and being rejected. It gave me a completely different understanding of what had been holding me back.</p>
+      <p>What’s really fascinating to me is that the book I later wrote is about confronting the inner monsters and patterns that keep us stuck. I think I was writing from a place of understanding that was still unfolding in me. Hecate Path helped me see that sometimes the thing stopping us isn't what we think it is. Sometimes we have to go much deeper to find it.</p>
+      <div class="twho"><b>Maria B.</b><span>Walked Hecate's Path · Author of <em>What’s Stopping You?</em></span></div>
+    </div>
+  </div>
   <div class="tgrid-img rv">
     <img class="timg" src="images/testimonial-1.png" alt="Client testimonial">
     <img class="timg" src="images/testimonial-2.png" alt="Client testimonial">
